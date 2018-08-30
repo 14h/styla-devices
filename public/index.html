@@ -1,0 +1,111 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+      .gradient-green{
+        background:linear-gradient(135deg, #DFEC51 0%,#73AA0A 100%);
+      }
+      .gradient-orange{
+          background:linear-gradient(135deg, #F5515F 0%,#A1051D 100%);
+      }
+      .gradient{
+          background:linear-gradient(135deg, #fcdf8a 0%,#f8b986 100%);
+      }
+      .card{
+          min-height: 450px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <nav class="orange lighten-5" role="navigation"> -->
+    <nav class="gradient" role="navigation">
+      <div class="nav-wrapper container"><svg style="width:180px;margin-top:8px;" class="c-masthead--logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112.33 30.33">
+                <path class="o-styla-logo o-hide" d="M39.85,20.42l1-.78A4.9,4.9,0,0,0,45,21.82c2.09,0,3.74-1.28,3.74-3.23s-1.94-2.72-4-3.37-4.38-1.49-4.38-4.13c0-2.24,2-3.88,4.63-3.88a5.57,5.57,0,0,1,4.59,2.1l-1,.73a4.18,4.18,0,0,0-3.63-1.76c-1.9,0-3.37,1.15-3.37,2.81,0,2,1.88,2.53,3.89,3.18C47.75,15,50,15.85,50,18.6,50,21,48,22.93,45,22.93a6.24,6.24,0,0,1-5.19-2.51"></path>
+                <polygon class="o-styla-logo o-hide" points="53.66 7.43 53.66 8.54 58.53 8.54 58.53 22.72 59.77 22.72 59.77 8.54 64.64 8.54 64.64 7.43 53.66 7.43"></polygon>
+                <polygon class="o-styla-logo o-hide" points="78.93 7.43 74.48 14.3 70.04 7.43 68.66 7.43 73.89 15.45 73.89 22.72 75.13 22.72 75.13 15.41 80.31 7.43 78.93 7.43"></polygon>
+                <polygon class="o-styla-logo o-hide" points="84.76 7.43 84.76 22.72 93.41 22.72 93.41 21.57 86 21.57 86 7.43 84.76 7.43"></polygon>
+                <path class="o-styla-logo o-hide" d="M104.34,9l3.22,8.25h-6.47Zm-.66-1.61-6,15.3H99l1.67-4.27H108l1.69,4.27H111l-6-15.3Z"></path>
+                <path class="o-styla-logo" d="M16,10.12H2.18a1.39,1.39,0,0,1,0-2.79H16a1.39,1.39,0,0,1,0,2.79"></path>
+                <path class="o-styla-logo" d="M21.59,16.47H5.74a1.39,1.39,0,1,1,0-2.79H21.59a1.39,1.39,0,1,1,0,2.79"></path>
+                <path class="o-styla-logo" d="M26.22,22.82H12.44a1.39,1.39,0,1,1,0-2.79H26.22a1.39,1.39,0,1,1,0,2.79"></path>
+                <path class="o-styla-logo" d="M20.09,29.17H4.24a1.39,1.39,0,1,1,0-2.79H20.09a1.39,1.39,0,0,1,0,2.79"></path>
+                <path class="o-styla-logo" d="M24.63,3.78H8.78A1.39,1.39,0,0,1,8.78,1H24.63a1.39,1.39,0,0,1,0,2.79"></path>
+            </svg>
+        <ul class="right hide-on-med-and-down">
+          <!-- <li><a href="#">Navbar Link</a></li> -->
+          <li><div class="switch">
+
+            <label>
+              Depo-only &nbsp;Off
+              <input type="checkbox"  id="depo-only-checkbox">
+              <span class="lever"></span>
+              On&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </label>
+          </div></li>
+          <li><div class="switch">
+
+            <label>
+              Sell-only &nbsp;Off
+              <input type="checkbox"  id="sell-only-checkbox">
+              <span class="lever"></span>
+              On
+            </label>
+          </div></li>
+
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><div class="switch">
+
+            <label>
+              Depo-only &nbsp;Off
+              <input type="checkbox"  id="depo-only-checkbox">
+              <span class="lever"></span>
+              On&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </label>
+          </div></li>
+          <li><div class="switch">
+
+            <label>
+              Sell-only &nbsp;Off
+              <input type="checkbox"  id="sell-only-checkbox">
+              <span class="lever"></span>
+              On
+            </label>
+          </div></li>
+
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  <br>
+    <div class="container">
+      <div class="row">
+        <div class="input-field ">
+          <input id="search-input" type="text" class="validate" placeholder="Search">
+          <!-- <label class="active" for="tag-input"> Tag</label> -->
+        </div>
+      </div>
+      <div class="row" id="devices-container">
+      </div>
+    </div>
+  <br><br><br><br><br><br><br>
+
+
+    <!--Import jQuery before materialize.js-->
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  </body>
+</html>
